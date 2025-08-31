@@ -1,0 +1,21 @@
+package com.votezy.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Entity
+@Data
+public class Vote {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne
+    @JoinColumn(name="voter_id", unique = true)
+    private Voter voter;
+
+    @ManyToMany
+    @JoinColumn(name="candidate_id")
+    private  Candidate candidate;
+}
