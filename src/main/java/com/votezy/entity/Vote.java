@@ -15,7 +15,7 @@ public class Vote {
     @JoinColumn(name="voter_id", unique = true)
     private Voter voter;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name="candidate_id")
-    private  Candidate candidate;
+    private Candidate candidate;
 }
