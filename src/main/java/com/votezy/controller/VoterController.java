@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/voters")
 @CrossOrigin
 public class VoterController {
-    private VoterService voterService;
+    private final VoterService voterService;
     @Autowired
     public VoterController(VoterService voterService) {
         this.voterService = voterService;

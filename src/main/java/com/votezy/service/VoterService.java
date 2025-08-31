@@ -15,8 +15,8 @@ import java.util.List;
 
 @Service
 public class VoterService {
-    private VoterRepository voterRepository;
-    private CandidateRepository candidateRepository;
+    private final VoterRepository voterRepository;
+    private final CandidateRepository candidateRepository;
 
     @Autowired
     public VoterService(VoterRepository voterRepository, CandidateRepository candidateRepository) {
